@@ -3,6 +3,7 @@ Snap::Application.routes.draw do
   resources :questions
   resources :users, only: [:new, :create]
   resources :sessions, only: [:new, :create]
+  resources :questions, except: [:new]
 
   match '/register', to: 'users#new', via: :get
   match '/login', to: 'sessions#new', via: :get
