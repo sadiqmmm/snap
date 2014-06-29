@@ -1,5 +1,6 @@
 Snap::Application.routes.draw do
   resources :questions
+  resources :users, only: [:new, :create]
 
   root to: "questions#index"
   # The priority is based upon order of creation:
