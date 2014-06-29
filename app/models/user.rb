@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   has_secure_password
 
   validates :username, presence: true, uniqueness: { case_sensitve: false },
-                                       length: { in: 4..12},
+                                       length: { in: 3..12},
                                        format: { with: /^[a-z][a-z0-9]*$/, message: "can only contain lowercase letters and numbers"}
 
   validates :password, length: { in: 4..20 }
