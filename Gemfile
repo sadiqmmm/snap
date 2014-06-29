@@ -18,3 +18,4 @@ end
 
 gem 'jquery-rails'
 gem 'bcrypt-ruby'
+gem 'will_paginate'
