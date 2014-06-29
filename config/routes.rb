@@ -1,6 +1,12 @@
 Snap::Application.routes.draw do
+  
   resources :questions
   resources :users, only: [:new, :create]
+  resources :sessions, only: [:new, :create]
+
+  match '/register', to: 'users#new', via: :get
+  match '/login', to: 'sessions#new', via: :get
+  match '/logout', to: 'sessions#destroy', via: :delete
 
   root to: "questions#index"
   # The priority is based upon order of creation:
